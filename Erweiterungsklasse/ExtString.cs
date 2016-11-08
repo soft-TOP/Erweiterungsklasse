@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Erweiterungsklasse
 {
-    public static class ExtString
+    public static partial class Extensionen
     {
         /// <summary>
         /// Die Zeichen, welche als Trennzeichen zwischen Vornamen und Nachnamen angenommen werden
