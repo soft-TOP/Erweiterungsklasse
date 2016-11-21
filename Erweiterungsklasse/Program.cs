@@ -31,6 +31,18 @@ namespace Erweiterungsklasse
             Console.WriteLine($"{(-14).Celsius(),platz2}; {(-18).Kelvin(),platz2}");
             Console.WriteLine($"{14.ToCelsius().Celsius(),platz2}; {18.ToKelvin().Kelvin(),platz2}");
 
+
+            // verschiedene Wahrheitswerte sammeln
+            List<String> wahrheit = new List<string>() { "wahr", "w", "ja", "richtig", "falsch", "f", "nein", "unrichtig", "0", "1", "10000", "0,1", "0.1", "true", false.ToString() };
+
+
+            Boolean bb = false;
+            foreach (var w in wahrheit)
+            {
+                Console.WriteLine(w + " - " + (w.TryToBoolean(out bb) ? bb.ToString() : "xx"));
+            }
+
+
             Console.ReadLine();
         }
     }

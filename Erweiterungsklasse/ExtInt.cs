@@ -13,7 +13,7 @@ namespace Erweiterungsklasse
         /// setzt eine Einheit an die Zahl
         /// </summary>
         /// <param name="Temperatur">Auszugebende Temperatur</param>
-        /// <returns>Die Zahl als Temperaur mit der Einheit Kelvin</returns>
+        /// <returns>Die Zahl als Temperatur mit der Einheit Kelvin</returns>
         public static String Kelvin(this Int32 Temperatur)
         {
             return Temperatur.ToString() + "K";
@@ -23,7 +23,7 @@ namespace Erweiterungsklasse
         /// setzt eine Einheit an die Zahl
         /// </summary>
         /// <param name="Temperatur">Auszugebende Temperatur</param>
-        /// <returns>Die Zahl als Temperaur mit der Einheit °C</returns>
+        /// <returns>Die Zahl als Temperatur mit der Einheit °C</returns>
         public static String Celsius(this Int32 Temperatur)
         {
             return Temperatur.ToString() + "°C";
