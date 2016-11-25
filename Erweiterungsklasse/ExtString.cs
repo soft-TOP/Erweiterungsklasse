@@ -9,9 +9,18 @@ namespace Erweiterungsklasse
     public static partial class Extensionen
     {
         /// <summary>
-        /// Die Zeichen, welche als Trennzeichen zwischen Vornamen und Nachnamen angenommen werden
+        /// Die Zeichen, welche als Trennzeichen zwischen Vornamen und Nachnamen 
+        /// oder zwischen Wörtern allgemein angenommen werden
         /// </summary>
-        static private Char[] chars = new Char[] { ' ', '.', ',', ':', '-' };
+        static private Char[] chars = { ' ', '.', ',', ':', '-', '?' , '!' , ';'};
+
+
+        /// <summary>
+        /// Gibt die Anzahl der Wörter im String wieder.
+        /// </summary>
+        /// <param name="str">Die zu prüfende Zeichenfolge</param>
+        /// <returns>Anzahl der Wörter in der Zeichenfolge</returns>
+        public static int WordCount(this String str) => String.IsNullOrWhiteSpace(str) ? 0 : str.Split(chars, StringSplitOptions.RemoveEmptyEntries).Length;
 
         /// <summary>
         /// Trennt einen übergebenen Namen in Vornamen und Nachnamen

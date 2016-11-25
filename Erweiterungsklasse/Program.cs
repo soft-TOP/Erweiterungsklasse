@@ -33,13 +33,15 @@ namespace Erweiterungsklasse
 
 
             // verschiedene Wahrheitswerte sammeln
-            List<String> wahrheit = new List<string>() { "wahr", "w", "ja", "richtig", "falsch", "f", "nein", "unrichtig", "0", "1", "10000", "0,1", "0.1", "true", false.ToString() };
+            List<String> wahrheit = new List<String> { "wahr", "w", "ja", "Platz da","richtig", "falsch", "f", "nein", "niemals", "unrichtig", "0", "1", "10000", "-1", "-77,5", "0,1", "0.1", "true", false.ToString() };
 
 
             Boolean bb = false;
             foreach (var w in wahrheit)
             {
-                Console.WriteLine(w + " - " + (w.TryToBoolean(out bb) ? bb.ToString() : "xx"));
+                Console.WriteLine((w.PadRight(9) + "-").PadRight(11) + (w.TryToBoolean(out bb) ? bb.ToString().PadRight(6) 
+                    + " DEU: " + bb.ToString("de-DE").PadRight(6)
+                    + " deu: " + bb.ToString(1031).PadRight(6) : "xx".PadLeft(6)));
             }
 
 
